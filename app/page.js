@@ -65,11 +65,12 @@ export default function Home() {
             </div>
           </div>
           <div className="relative group">
-            <Image src={vandor} height={100} width={300} />
+            <Image src={vandor} height={100} width={300} alt="simple image" />
             <Image
               src={VandorBorder}
               height={120}
               width={350}
+              alt="simple image"
               className="absolute top-6 right-3 group-hover:top-0 group-hover:right-0 duration-200"
             />
           </div>
@@ -102,6 +103,7 @@ export default function Home() {
                     src={e.img}
                     height={200}
                     width={200}
+                    alt="simple image"
                     className="m-auto hover:scale-105 duration-500"
                   />
                   <p className="text-wrap font-semibold py-4">{e.name}</p>
@@ -122,13 +124,19 @@ export default function Home() {
         <div className="bg-gradient-to-br from-white to-pink-100 w-full py-5 my-10 ">
           <h1 className="text-2xl font-bold text-center">Popular Categories</h1>
           <div className="grid lg:md:grid-cols-4 grid-cols-1 gap-y-10 gap-x-2 my-10 ">
-            {PopularCatogory.map((e) => {
+            {PopularCatogory.map((e, ind) => {
               return (
-                <div className="relative group m-auto">
-                  <Image src={e.img} width={200} height={200} />
+                <div className="relative group m-auto" key={ind}>
+                  <Image
+                    src={e.img}
+                    width={200}
+                    height={200}
+                    alt="simple image"
+                  />
                   <Image
                     src={Shadow}
                     width={200}
+                    alt="simple image"
                     height={200}
                     className="absolute top-0 left-0 hidden group-hover:block duration-200"
                   />
@@ -167,6 +175,7 @@ export default function Home() {
                     height={200}
                     width={200}
                     className="m-auto hover:scale-105 duration-500"
+                    alt="simple img"
                   />
                   <p className="text-wrap font-semibold py-4">{e.name}</p>
                   <div className="flex justify-between items-center">
@@ -191,18 +200,21 @@ export default function Home() {
                 width={140}
                 height={150}
                 className="md:lg:mt-0 my-3 mx-auto"
+                alt="simple image"
               />
               <Image
                 src={Imag2}
                 width={140}
                 height={150}
                 className="md:lg:mt-14 my-3 mx-auto"
+                alt="simple image"
               />
               <Image
                 src={Imag3}
                 width={140}
                 height={150}
                 className="md:lg:mt-0 my-3 mx-auto"
+                alt="simple image"
               />
             </div>
             <div className="">
